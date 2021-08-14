@@ -87,7 +87,7 @@ mydoc = from_ref.get()
 myrec = mydoc.to_dict()
 target_ref = todb.collection([Destination collection]).document([Destination document-ID])
 target_ref.set(myrec)
-・・・・・・
+......
 
 ```
 
@@ -97,12 +97,12 @@ I made such a matrix with json and saved it on the server. Then, the save destin
 ```json
 {
     "hello-world":{
-        , "www.[domain name]":"[Production Firebase Project ID #1]"
+          "www.[domain name]":"[Production Firebase Project ID #1]"
         , "test.[domain name]":"[Test Firebase Project ID #2]"
         , "test.local.[domain name]":"[Test Firebase Project ID #2]"
     }
     , "[WEBアプリの識別名]":{
-        , "www.[domain name]":"[Production Firebase Project ID #3]"
+          "www.[domain name]":"[Production Firebase Project ID #3]"
         , "test.[domain name]":"[Test Firebase Project ID #4]"
         , "test.local.[domain name]":"[Test Firebase Project ID #4]"
     }
@@ -116,7 +116,7 @@ There are multiple web apps running on my server, but each web app has its own "
 ```json
 {
     "app_id":[application identifier]
-    ・・・・・・
+    ......
 }
 ```
 This app_id is passed as json data when calling CGI from JavaScript (POST).
@@ -135,7 +135,7 @@ db = firestore.client(app) # get Firestore from initialized Firebase
 
 # Execute processing using Firestore
 newdocument = db.collection("[collection]").document()
-・・・・・・
+......
 ```
 **<font color="Blue">* Advantages of this method</font>**
 This setting is not necessary if it is troublesome. forget it.
@@ -145,14 +145,12 @@ When you call CGI, you can absorb the difference in the environment just by chan
 
 #### appendix
 The reason why the save folder name of the key file of the service account and the destination of the matrix are specified by environment variables without hard coding is that I wanted to make exactly the same Python work on the server (Linux) and the coding PC (Windows). Of course, there is no production key file on the PC.
-なお、マトリックスに定義した"test.local.「ドメイン名」"というのは、コーディング用PCのVSCode の Go Live に設定しているサーバー名です。VSCode のWEBサーバーではCGIは呼び出せないのですが、各PCの環境変数 SERVER_NAME に、"test.local.「ドメイン名」"をセットしてあります。VSCode で Python をデバッグするときは、ちゃんとマトリックスに従ってテスト用のFirebaseに接続しに行きます。
-さらに、コーディング（UT）用とテストサーバー（IT）で環境を分けたい場合もマトリックスに定義するだけなので簡単に分けられます。
+The "test.local. [Domain name]" defined in the matrix is the server name set in Go Live of VS Code on the coding PC. CGI cannot be called from the VSCode WEB server, but "test.local. [Domain name]" is set in the environment variable "SERVER_NAME" on each PC. When debugging Python with VSCode, follow the matrix and go to connect to Firebase of test environment.
+Furthermore, if you want to separate the environment for coding (UT) and test server (IT), you can easily separate them because you only need to define them in the matrix.
 
-### あとがき
-WEBで検索してみましたが、まとめて解説されているサイトが見つからずに迷いました。なかなか便利なものが出来たので、ここに公開します。
+### Appendix
+I searched on the WEB, but I was at a loss because I couldn't find a site that explains all of them. I've made something very useful, so I'll publish it here.
 
-こちらのwebsiteもよろしくお願いします。
-[[初心者のためのWEBシステムのインフラ構築]](https://www.olto3-sugi3.tk/ja/index.html)
-
-
+## Plese visit our website.
+### [WEB System Infrastructure Guide for Beginners](https://www.olto3-sugi3.tk/index.html)
 
