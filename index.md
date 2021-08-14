@@ -106,8 +106,6 @@ I made such a matrix with json and saved it on the server. Then, the save destin
         , "test.[domain name]":"[Test Firebase Project ID #4]"
         , "test.local.[domain name]":"[Test Firebase Project ID #4]"
     }
-    ......
-
 }
 ```
 Use this matrix to identify Firebase ID and connect to desired Firebase.
@@ -115,8 +113,7 @@ There are multiple web apps running on my server, but each web app has its own "
 
 ```json
 {
-    "app_id":[application identifier]
-    ......
+    "app_id":"[application identifier]"
 }
 ```
 This app_id is passed as json data when calling CGI from JavaScript (POST).
