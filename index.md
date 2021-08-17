@@ -5,7 +5,7 @@ The source code is made in Python, but I think that it can be handled with the s
 ## How to access Firebase
 We prohibit direct access to the Firestore from a browser - Javascript -. Since it is a WEB application that is open to the public, I was worried about attacks from the browser, so the rule of Firestore is set to [[Locked mode]](https://firebase.google.com/docs/firestore/quickstart?authuser=0#locked-mode).
 
-```js
+```
 service cloud.firestore {
   match /databases/{database}/documents {
     match /{document=**} {
