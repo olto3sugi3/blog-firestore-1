@@ -149,5 +149,5 @@ Furthermore, if you want to separate the environment for coding (UT) and test se
 I searched on the WEB, but I was at a loss because I couldn't find a site that explains all of them. I've made something very useful, so I'll publish it here.
 
 ## Plese visit our website.
-### [WEB System Infrastructure Guide for Beginners](https://www.olto3-sugi3.tk/index.html)
+### [WEB System Infrastructure Guide for Beginners](https://olto3-sugi3.tk/index.html)
 
