@@ -150,4 +150,5 @@ I searched on the WEB, but I was at a loss because I couldn't find a site that e
 
 ## Plese visit our website.
 ### [WEB System Infrastructure Guide for Beginners](https://olto3-sugi3.tk/index.html)
+### [Route Sales Manager](https://www.olto3-sugi3.tk/route-sales-manager/index.html)
 
